@@ -1,0 +1,263 @@
+/* General Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  background: #1e293b;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #38bdf8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
+  min-height: 90vh;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+  color: #38bdf8;
+}
+
+.hero-content h2 {
+  font-size: 22px;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #38bdf8;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-content .btn:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+
+.hero-img img {
+  width: 300px;
+  border-radius: 50%;
+  border: 5px solid #38bdf8;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Sections */
+section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+/* Skills */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skill {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.skill i {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  background: #0f172a;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  background: #0f172a;
+  transform: translateY(-5px);
+}
+
+/* Contact */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: #fff;
+}
+
+form textarea { resize: none; height: 120px; }
+
+form button {
+  background: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: #1e293b;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img {
+    margin-top: 20px;
+  }
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  background: none;
+  border: none;
+  color: #38bdf8;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* 🌞 Light Mode */
+body.light {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.light header {
+  background: #e2e8f0;
+}
+
+body.light .logo {
+  color: #0ea5e9;
+}
+
+body.light .nav-links li a {
+  color: #0f172a;
+}
+
+body.light .nav-links li a:hover {
+  color: #0ea5e9;
+}
+
+body.light .skill,
+body.light .project-card,
+body.light form input,
+body.light form textarea {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+body.light footer {
+  background: #e2e8f0;
+  color: #334155;
+}
