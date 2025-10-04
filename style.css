@@ -3,7 +3,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0f182a;
+  background: #0f172a;
   color: #e2e8f0;
   line-height: 1.6;
 }
@@ -261,4 +261,5 @@ body.light footer {
   background: #e2e8f0;
   color: #334155;
 }
+
 
